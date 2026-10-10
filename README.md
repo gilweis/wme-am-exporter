@@ -1,7 +1,7 @@
-# WME Scripts
+# WME Area Manager Exporter
 
-Userscripts for the **Waze Map Editor (WME)**, built on the official
-**WME SDK** (`window.getWmeSdk`).
+A userscript for the **Waze Map Editor (WME)**, built on the official
+**WME SDK** (`window.getWmeSdk`), that exports Area Manager (AM) territory polygons to a GeoJSON file.
 
 - SDK docs: https://www.waze.com/editor/sdk/index.html
 
@@ -13,11 +13,7 @@ Userscripts for the **Waze Map Editor (WME)**, built on the official
 
 ---
 
-## WME Area Manager Exporter (`wme-am-exporter.user.js`)
-
-Exports Area Manager (AM) territory polygons from WME to a GeoJSON file.
-
-### Why it pans the map
+## Why it pans the map
 
 WME only loads data for the **currently visible viewport**, so the Area Manager
 data set is not all present at once. The script reads
@@ -142,7 +138,7 @@ with any GeoJSON polygon(s) you like.
 
 ---
 
-## Conventions (both scripts)
+## Conventions
 
 - **`@grant none`** keeps the script in the page context so `window` is the
   page's real window. If you add any other `@grant` (e.g. `GM_setClipboard`),
