@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WME Area Manager Exporter (WME SDK)
 // @namespace    https://github.com/gilweis/wme-am-exporter
-// @version      0.3.0
+// @version      0.3.1
 // @description  Scans a GeoJSON area in the Waze Map Editor by auto-panning the map, collects Area Manager polygons, and exports them to a JSON file.
 // @author       you
 // @match        https://www.waze.com/editor*
@@ -161,7 +161,7 @@
                 </label>
 
                 <div class="wme-amex-actions">
-                    <button type="button" id="wme-amex-test" disabled>Test current view</button>
+                    <button type="button" id="wme-amex-test">Test current view</button>
                     <button type="button" id="wme-amex-start" disabled>Start scan</button>
                     <button type="button" id="wme-amex-cancel" disabled>Cancel</button>
                     <button type="button" id="wme-amex-download" disabled>Download last result</button>
@@ -181,11 +181,10 @@
             }
         });
 
-        // Enable/disable Start scan and Test buttons based on file selection
+        // Enable/disable Start scan button based on file selection
         q("#wme-amex-file").addEventListener("change", () => {
             const hasFile = q("#wme-amex-file").files.length > 0;
             q("#wme-amex-start").disabled = !hasFile || state.scanning;
-            q("#wme-amex-test").disabled = !hasFile || state.scanning;
         });
     }
 
@@ -234,7 +233,7 @@
     function setUiRunning(running) {
         const hasFile = q("#wme-amex-file").files.length > 0;
         q("#wme-amex-start").disabled = running || !hasFile;
-        q("#wme-amex-test").disabled = running || !hasFile;
+        q("#wme-amex-test").disabled = running;
         q("#wme-amex-cancel").disabled = !running;
         q("#wme-amex-download").disabled = !state.lastResult;
     }
