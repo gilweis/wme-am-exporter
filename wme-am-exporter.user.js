@@ -14,6 +14,7 @@
 // @run-at       document-idle
 // @noframes
 // @license      MIT
+// @homepageURL  https://github.com/gilweis/wme-am-exporter
 // @downloadURL  https://raw.githubusercontent.com/gilweis/wme-am-exporter/master/wme-am-exporter.user.js
 // @updateURL    https://raw.githubusercontent.com/gilweis/wme-am-exporter/master/wme-am-exporter.user.js
 // ==/UserScript==
