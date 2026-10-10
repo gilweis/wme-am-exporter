@@ -1,0 +1,19 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Israel (rough bounding box - for testing only)",
+    "note": "This is a coarse bounding box around Israel. Replace it with a proper Israel outline for accurate results."
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [34.25, 29.45],
+        [35.95, 29.45],
+        [35.95, 33.40],
+        [34.25, 33.40],
+        [34.25, 29.45]
+      ]
+    ]
+  }
+}
